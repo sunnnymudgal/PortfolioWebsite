@@ -18,6 +18,7 @@ function App() {
 
   return (
     <div className="w-full min-h-screen bg-zinc-900 text-white">
+      <Navbar/>
       <section id="home">
         <LandingPage />
         <Marquee/>
