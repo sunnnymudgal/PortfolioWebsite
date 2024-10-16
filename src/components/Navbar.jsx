@@ -18,7 +18,6 @@ export const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -26,51 +25,52 @@ export const Navbar = () => {
 
   return (
     <div
-      className={`fixed z-[999] w-full px-8 py-6 bg-[#0000007f] shadow-lg rounded-3xl transition-transform duration-500 ease-in-out ${
-        visible ? "transform translate-y-0" : "transform -translate-y-full"
+      className={`fixed z-50 w-full px-4 sm:px-8 py-4 bg-black/80 backdrop-blur-sm shadow-lg rounded-b-2xl transition-transform duration-500 ease-in-out ${
+        visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div className="container mx-auto flex justify-between items-center">
         <div className="logo text-white">
-          <h1>SUNNYMUDGAL</h1>
+          <h1 className="text-xl sm:text-2xl font-semibold">SUNNYMUDGAL</h1>
         </div>
 
-        <div className="hidden md:flex space-x-10">
+        {/* Links for larger screens */}
+        <div className="hidden md:flex space-x-8">
           {["Home", "About Me", "Projects", "Contact"].map((item, index) => (
             <a
               key={index}
-              href={`#${item.replace(/\s+/g, "").toLowerCase()}`} 
-              className="text-lg cursor-pointer font-light text-white hover:text-gray-600"
+              href={`#${item.replace(/\s+/g, "").toLowerCase()}`}
+              className="text-lg font-light text-white hover:text-gray-300 transition duration-300"
             >
               {item}
             </a>
           ))}
         </div>
 
-
+        {/* Mobile Menu Icon */}
         <div className="md:hidden">
           <button
             onClick={toggleNav}
-            className="text-white transition-all duration-1000 ease-linear"
+            className="text-white transition duration-300 ease-linear"
           >
             {navOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
         </div>
       </div>
 
-
+      {/* Mobile Menu */}
       <div
-        className={`md:hidden text-center overflow-hidden transition-all duration-700 ease-in-out ${
-          navOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+        className={`md:hidden flex flex-col items-center bg-black/90 rounded-b-2xl overflow-hidden transition-all duration-500 ease-in-out ${
+          navOpen ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <ul className="space-y-4 py-4 bg-[#000000bd] rounded-3xl">
+        <ul className="w-full py-4 space-y-4 text-center">
           {["Home", "About Me", "Projects", "Contact"].map((item, index) => (
             <li key={index}>
               <a
-                href={`#${item.replace(/\s+/g, "").toLowerCase()}`} 
-                className="text-lg font-light cursor-pointer text-white hover:text-gray-400"
-                onClick={toggleNav} 
+                href={`#${item.replace(/\s+/g, "").toLowerCase()}`}
+                className="block text-lg text-white font-light hover:text-gray-400 transition duration-300"
+                onClick={toggleNav}
               >
                 {item}
               </a>

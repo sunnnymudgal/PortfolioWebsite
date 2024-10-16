@@ -1,5 +1,6 @@
 import React from "react";
 import AnImage from "./AnImage";
+import { Navbar } from "./Navbar";
 
 function LandingPage() {
   return (
@@ -8,6 +9,8 @@ function LandingPage() {
       data-scroll-speed="-.3"
       className="w-full h-auto bg-zinc-900"
     >
+      <Navbar/>
+
       <div className="textstructure flex max-md:flex-col items-center pt-32 max-md:pt-20">
         <div className="masker flex flex-col items-start justify-start w-4/6">
           {["Hello", "I'm Sunny", "Mudgal"].map((item, index) => (
