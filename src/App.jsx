@@ -17,8 +17,7 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <Navbar />
+  
     <div className="w-full min-h-screen bg-zinc-900 text-white">
       <section id="home">
         <LandingPage />
@@ -34,7 +33,7 @@ function App() {
         <Footer />
       </section>
     </div>
-      </div>
+
   );
 }
 
