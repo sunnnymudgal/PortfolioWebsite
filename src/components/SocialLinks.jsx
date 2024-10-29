@@ -23,9 +23,9 @@ function SocialLinks() {
       <div className="flex flex-wrap justify-center items-center py-[3vh] gap-6 rounded-3xl bg-[#edf2fc00] text-[#474849]">
         {/* Using the reusable SocialLinkCard */}
         {[
-          { Icon: IoLogoLinkedin, link: "https://www.linkedin.com/in/sunny-mudgal/", msg: "LinkedIn" },
-          { Icon: FaXTwitter, link: "https://x.com/sunnnymudgal", msg: "Twitter" },
-          { Icon: SiGmail, link: "mailto:sunnyxmudgal@gmail.com", msg: "Email" },
+          { Icon: IoLogoLinkedin, link: "https://www.linkedin.com/in/sunny-mudgal/", msg: "" },
+          { Icon: FaXTwitter, link: "https://x.com/sunnnymudgal", msg: "" },
+          { Icon: SiGmail, link: "mailto:sunnyxmudgal@gmail.com", msg: "" },
         ].map(({ Icon, link, msg }, index) => (
           <motion.div
             key={index}
