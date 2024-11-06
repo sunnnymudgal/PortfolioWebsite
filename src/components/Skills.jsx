@@ -65,7 +65,7 @@ function Skills() {
             color="text-[#ffffff]"
           />
           <TechLogo logo={FaBootstrap} logoName="BOOTSTRAP" bg="bg-[#563D7C]" />
-          <TechLogo logo={SiMongodb} logoName="MongoBD" bg="bg-[#4EA94B]" />
+          <TechLogo logo={SiMongodb} logoName="Mongo DB" bg="bg-[#4EA94B]" />
           <TechLogo logo={TbBrandMysql} logoName="Mysql" bg="bg-[#0000FF]" />
 
           <TechLogo
