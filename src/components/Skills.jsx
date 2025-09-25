@@ -44,8 +44,8 @@ function Skills() {
             logoName="spring boot"
             bg="bg-[#69AD3C]"
           />
-          <TechLogo logo={IoLogoHtml5} logoName="HTML" bg="bg-[#E34F26]" />
-          <TechLogo logo={FaCss3Alt} logoName="CSS" bg="bg-[#1572B6]" />
+          <TechLogo logo={IoLogoHtml5} logoName="HTML5" bg="bg-[#E34F26]" />
+          <TechLogo logo={FaCss3Alt} logoName="CSS3" bg="bg-[#1572B6]" />
           <TechLogo
             logo={RiJavascriptFill}
             logoName="JavaScript"
