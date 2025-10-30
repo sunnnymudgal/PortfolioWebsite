@@ -19,7 +19,7 @@ function About() {
       <div className="w-full pt-10 border-t-[1px] border-[#7b8f32] mt-10 flex flex-col md:flex-row gap-5">
         <div className="w-full md:w-1/2">
           <div className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tighter">Skills i have;</div>
-          <a target="_blank" /* href="https://drive.google.com/file/d/1rPNmeQSjUoR8R3uF5DMKJZPcFSbHhtI5/view?usp=sharing" */>
+          <a target="_blank" href="https://drive.google.com/file/d/1Pw3-hkezmPVQs1gBn7loq2oicxbBgx2W/view?usp=sharing">
           <button className="flex gap-2 items-center pl-4 pr-1 py-2 mt-10 bg-zinc-900 rounded-full text-white transition duration-300 hover:bg-zinc-800">
             MY RESUME
             <div className="w-6 h-6 md:w-10 md:h-10 rounded-full border-[1px] border-zinc-400 flex items-center justify-center">
