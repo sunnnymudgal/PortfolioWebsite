@@ -33,7 +33,7 @@ function TechLogo(props) {
 function Skills() {
   return (
     <div id="skills">
-      <div className=" bg-[#edf2fc00] p-10">
+      <div className=" bg-[#a2d2ff] p-10">
         <div className="flex flex-wrap">
           <TechLogo logo={FaJava} logoName="JAVA" bg="bg-[#B07219]" />
           <TechLogo
