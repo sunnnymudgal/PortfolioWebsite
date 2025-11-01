@@ -21,7 +21,7 @@ function TechLogo(props) {
   return (
     <>
       <div
-        className={`${bg}  text-white rounded-md m-[2px] flex items-center w-fit px-3 py-1 gap-2 uppercase anton-sc-regular tracking-[1px] cursor-pointer`}
+        className={`${bg} text-white rounded-md m-[2px] flex items-center w-fit px-3 py-1 gap-2 uppercase anton-sc-regular tracking-[1px] cursor-pointer`}
       >
         <Logo className={`${color}`} />
         {logoName}
@@ -33,7 +33,7 @@ function TechLogo(props) {
 function Skills() {
   return (
     <div id="skills">
-      <div className=" bg-[#2a4e34] p-10 rounded-lg ">
+      <div className=" bg-[#9652E3] p-10 rounded-lg ">
         <div className="flex flex-wrap">
           <TechLogo logo={FaJava} logoName="JAVA" bg="bg-[#B07219]" />
           <TechLogo
