@@ -37,7 +37,7 @@ function Projects() {
             {/* Image */}
             <div className="relative group overflow-hidden rounded-xl">
               <img
-                src="/images/logo.png"   // 👈 place image in public/images
+                src="/images/logo.jpg"
                 alt="BlueBird E-Commerce Project"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
@@ -62,7 +62,7 @@ function Projects() {
               </p>
 
               {/* Tech Stack */}
-              <div className="flex flex-wrap gap-3 mb-6">
+              <div className="flex flex-wrap gap-3 mb-6 text-[#000]">
                 {[
                   "Java",
                   "Spring Boot",
@@ -93,7 +93,7 @@ function Projects() {
                   href="https://github.com/sunnnymudgal"
                   target="_blank"
                   rel="noreferrer"
-                  className="px-6 py-2 border border-black rounded-lg hover:bg-black hover:text-white transition"
+                  className="px-6 py-2 text-black border border-black rounded-lg hover:bg-black hover:text-white transition"
                 >
                   GitHub
                 </a>
