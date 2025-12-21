@@ -39,7 +39,7 @@ function Projects() {
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
 
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <div className="absolute inset-0 transition flex items-center justify-center">
                 <span className="text-white text-lg font-semibold">
                   BlueBird E-Commerce
                 </span>
