@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Navbar } from "./components/Navbar";
 import LandingPage from "./components/LandingPage";
 import Marquee from "./components/Marquee";
 import About from "./components/About";
@@ -7,7 +6,7 @@ import Projects from "./components/Projects";
 import LocomotiveScroll from "locomotive-scroll";
 import "./index.css";
 import Footer from "./components/Footer";
-import { Navbar } from ".components/Navbar";
+import Navbar from "./components/Navbar";
 
 function App() {
   useEffect(() => {
