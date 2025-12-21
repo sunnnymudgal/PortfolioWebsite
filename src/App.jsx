@@ -1,21 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import LandingPage from "./components/LandingPage";
 import Marquee from "./components/Marquee";
 import About from "./components/About";
 import Projects from "./components/Projects";
-import LocomotiveScroll from "locomotive-scroll";
-import "./index.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import LocomotiveScroll from "locomotive-scroll";
+import "./index.css";
 
 function App() {
+  const scrollRef = useRef(null);
+
   useEffect(() => {
-    const locomotiveScroll = new LocomotiveScroll({
+    const scroll = new LocomotiveScroll({
+      el: scrollRef.current,
       smooth: true,
     });
 
     return () => {
-      locomotiveScroll.destroy();
+      scroll.destroy();
     };
   }, []);
 
@@ -26,23 +29,24 @@ function App() {
 
 
       <main
+        ref={scrollRef}
         data-scroll-container
-        className="w-full min-h-screen bg-zinc-900 text-white"
+        className="bg-zinc-900 text-white"
       >
-        <section id="home">
+        <section id="home" data-scroll-section>
           <LandingPage />
           <Marquee />
         </section>
 
-        <section id="aboutme">
+        <section id="aboutme" data-scroll-section>
           <About />
         </section>
 
-        <section id="projects">
+        <section id="projects" data-scroll-section>
           <Projects />
         </section>
 
-        <section id="contact">
+        <section id="contact" data-scroll-section>
           <Footer />
         </section>
       </main>
