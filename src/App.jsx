@@ -7,7 +7,7 @@ import Projects from "./components/Projects";
 import LocomotiveScroll from "locomotive-scroll";
 import "./index.css";
 import Footer from "./components/Footer";
-import { Navbar } from "./Navbar";
+import { Navbar } from ".components/Navbar";
 
 function App() {
   useEffect(() => {
