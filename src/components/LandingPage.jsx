@@ -9,7 +9,7 @@ function LandingPage() {
       data-scroll-speed="-.3"
       className="w-full h-auto bg-zinc-900"
     >
-  {/*       <Navbar/> */}
+    <Navbar/> 
 
       <div className="textstructure flex max-md:flex-col items-center pt-32 max-md:pt-20">
         <div className="masker flex flex-col items-start justify-start w-4/6">
