@@ -8,7 +8,7 @@ function Projects() {
 
         {/* Heading */}
         <div className="text-5xl sm:text-6xl lg:text-7xl tracking-tight text-center py-4">
-          Projects;
+            Featured Projects;
         </div>
 
         {/* GitHub Link */}
@@ -28,9 +28,6 @@ function Projects() {
 
         {/* Project Card */}
         <section className="max-w-6xl mx-auto py-20">
-          <h2 className="text-4xl font-bold text-center mb-14 font-mono">
-            Featured Project
-          </h2>
 
           <div className="grid md:grid-cols-2 gap-10 items-center bg-white shadow-xl rounded-2xl p-8">
 
