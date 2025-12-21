@@ -31,7 +31,7 @@ function Projects() {
     <!-- Project Image -->
     <div class="relative group overflow-hidden rounded-xl">
       <img 
-        src="bluebird-project.png" 
+        src="./images/logo.png" 
         alt="BlueBird E-Commerce Project"
         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
       />
