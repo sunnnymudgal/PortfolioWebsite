@@ -3,74 +3,87 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 export const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const [visible, setVisible] = useState(true);
 
-  const toggleNav = () => {
-    setNavOpen(!navOpen);
-  };
-
-  const handleScroll = () => {
-    const currentScrollPos = window.pageYOffset;
-    setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-    setPrevScrollPos(currentScrollPos);
-  };
+  const toggleNav = () => setNavOpen(!navOpen);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        // scrolling down
+        setVisible(false);
+      } else {
+        // scrolling up
+        setVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
     };
-  }, [prevScrollPos]);
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   return (
-    <div
-      className={`fixed z-50 w-full px-4 sm:px-8 py-4 bg-black/80 backdrop-blur-sm shadow-lg rounded-b-2xl transition-transform duration-500 ease-in-out ${
-        visible ? "translate-y-0" : "-translate-y-full"
-      }`}
+    <header
+      className={`fixed top-4 left-1/2 -translate-x-1/2 z-50
+      transition-all duration-500 ease-in-out
+      ${visible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8"}
+      `}
     >
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="logo text-white">
-          <h1 className="text-xl sm:text-2xl font-semibold">SUNNYMUDGAL</h1>
+      {/* MAIN NAV */}
+      <nav className="flex items-center gap-6 bg-[#1f2933]/90 backdrop-blur-md px-4 py-2 rounded-full shadow-2xl">
+
+        {/* Logo */}
+        <div className="w-9 h-9 flex items-center justify-center rounded-full bg-[#7c9cff] text-white font-bold">
+          S
         </div>
 
-        {/* Links for larger screens */}
-        <div className="hidden md:flex space-x-8">
-          {["Home", "About Me", "Projects", "Contact"].map((item, index) => (
-            <a
-              key={index}
-              href={`#${item.replace(/\s+/g, "").toLowerCase()}`}
-              className="text-lg font-light text-white hover:text-gray-300 transition duration-300"
+        {/* Desktop Links */}
+        <ul className="hidden md:flex items-center gap-6 text-sm font-medium text-[#dbe4ff]">
+          {["Home", "About Me", "Projects", "Contact"].map((item) => (
+            <li
+              key={item}
+              className="hover:text-white transition duration-300 cursor-pointer"
             >
-              {item}
-            </a>
+              <a href={`#${item.replace(/\s+/g, "").toLowerCase()}`}>
+                {item}
+              </a>
+            </li>
           ))}
-        </div>
+        </ul>
 
-        {/* Mobile Menu Icon */}
-        <div className="md:hidden">
-          <button
-            onClick={toggleNav}
-            className="text-white transition duration-300 ease-linear"
-          >
-            {navOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-          </button>
-        </div>
-      </div>
+        {/* Mobile Menu Button */}
+        <button
+          onClick={toggleNav}
+          className="md:hidden text-[#dbe4ff] hover:text-white transition"
+        >
+          {navOpen ? <FaTimes size={18} /> : <FaBars size={18} />}
+        </button>
 
-      {/* Mobile Menu */}
+        {/* Email / CTA */}
+        <div className="hidden sm:block bg-[#2d3a46] text-[#dbe4ff] px-4 py-1.5 rounded-full text-sm hover:bg-[#7c9cff] hover:text-white transition">
+          sunnyxmudgal@gmail.com
+        </div>
+      </nav>
+
+      {/* MOBILE MENU */}
       <div
-        className={`md:hidden flex flex-col items-center bg-black/90 rounded-b-2xl overflow-hidden transition-all duration-500 ease-in-out ${
-          navOpen ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`md:hidden mt-3 bg-[#1f2933]/95 backdrop-blur-md rounded-2xl shadow-xl
+        transition-all duration-500 ease-in-out overflow-hidden
+        ${navOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"}
+        `}
       >
-        <ul className="w-full py-4 space-y-4 text-center">
-          {["Home", "About Me", "Projects", "Contact"].map((item, index) => (
-            <li key={index}>
+        <ul className="flex flex-col items-center gap-4 py-4 text-[#dbe4ff]">
+          {["Home", "About Me", "Projects", "Contact"].map((item) => (
+            <li key={item}>
               <a
                 href={`#${item.replace(/\s+/g, "").toLowerCase()}`}
-                className="block text-lg text-white font-light hover:text-gray-400 transition duration-300"
-                onClick={toggleNav}
+                onClick={() => setNavOpen(false)}
+                className="hover:text-white transition"
               >
                 {item}
               </a>
@@ -78,6 +91,6 @@ export const Navbar = () => {
           ))}
         </ul>
       </div>
-    </div>
+    </header>
   );
 };
