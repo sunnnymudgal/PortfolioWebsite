@@ -86,7 +86,7 @@ function Projects() {
   </div>
 </section>
 
-          <div className="card w-full sm:w-1/2 h-[50vh] sm:h-[80vh] bg-red-600 rounded-lg flex items-center justify-center">loading...</div>
+          <div className="card w-full sm:w-1/2 h-[50vh] sm:h-[80vh] bg-red-600 rounded-lg flex items-center justify-center">loading....</div>
         </div>
       </div>
     </div>
