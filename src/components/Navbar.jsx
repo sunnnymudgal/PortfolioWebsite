@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 export const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const [visible, setVisible] = useState(true);
+  const lastScrollY = useRef(0);
 
   const toggleNav = () => setNavOpen(!navOpen);
 
@@ -12,7 +12,7 @@ export const Navbar = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+      if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
         // scrolling down
         setVisible(false);
       } else {
@@ -20,70 +20,75 @@ export const Navbar = () => {
         setVisible(true);
       }
 
-      setLastScrollY(currentScrollY);
+      lastScrollY.current = currentScrollY;
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   return (
     <header
-      className={`fixed top-4 left-1/2 -translate-x-1/2 z-50
+      className={`fixed top-5 left-1/2 -translate-x-1/2 z-50
       transition-all duration-500 ease-in-out
-      ${visible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8"}
+      ${visible ? "translate-y-0 opacity-100" : "-translate-y-12 opacity-0"}
       `}
     >
       {/* MAIN NAV */}
-      <nav className="flex items-center gap-6 bg-[#1f2933]/90 backdrop-blur-md px-4 py-2 rounded-full shadow-2xl">
+      <nav className="flex items-center gap-6 px-4 py-2 rounded-full
+        bg-[#eef1ec]/80 backdrop-blur-md shadow-xl border border-black/5">
 
         {/* Logo */}
-        <div className="w-9 h-9 flex items-center justify-center rounded-full bg-[#7c9cff] text-white font-bold">
+        <div className="w-9 h-9 flex items-center justify-center rounded-full
+          bg-[#7a8f6a] text-white font-semibold">
           S
         </div>
 
         {/* Desktop Links */}
-        <ul className="hidden md:flex items-center gap-6 text-sm font-medium text-[#dbe4ff]">
+        <ul className="hidden md:flex items-center gap-6 text-sm font-medium text-[#4b5563]">
           {["Home", "About Me", "Projects", "Contact"].map((item) => (
-            <li
-              key={item}
-              className="hover:text-white transition duration-300 cursor-pointer"
-            >
-              <a href={`#${item.replace(/\s+/g, "").toLowerCase()}`}>
+            <li key={item}>
+              <a
+                href={`#${item.replace(/\s+/g, "").toLowerCase()}`}
+                className="hover:text-[#5b6ee1] transition-colors"
+              >
                 {item}
               </a>
             </li>
           ))}
         </ul>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Button */}
         <button
           onClick={toggleNav}
-          className="md:hidden text-[#dbe4ff] hover:text-white transition"
+          className="md:hidden text-[#6b7280] hover:text-[#5b6ee1] transition"
         >
           {navOpen ? <FaTimes size={18} /> : <FaBars size={18} />}
         </button>
 
-        {/* Email / CTA */}
-        <div className="hidden sm:block bg-[#2d3a46] text-[#dbe4ff] px-4 py-1.5 rounded-full text-sm hover:bg-[#7c9cff] hover:text-white transition">
-          sunnyxmudgal@gmail.com
+        {/* Email Pill */}
+        <div className="hidden sm:block px-4 py-1.5 rounded-full text-sm
+          bg-[#f2e8e8] text-[#8b3a3a]
+          hover:bg-[#5b6ee1] hover:text-white transition">
+          sunny@gmail.com
         </div>
       </nav>
 
       {/* MOBILE MENU */}
       <div
-        className={`md:hidden mt-3 bg-[#1f2933]/95 backdrop-blur-md rounded-2xl shadow-xl
-        transition-all duration-500 ease-in-out overflow-hidden
+        className={`md:hidden mt-3 rounded-2xl overflow-hidden
+        bg-[#eef1ec]/90 backdrop-blur-md shadow-lg
+        transition-all duration-500 ease-in-out
         ${navOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"}
         `}
       >
-        <ul className="flex flex-col items-center gap-4 py-4 text-[#dbe4ff]">
+        <ul className="flex flex-col items-center gap-4 py-4 text-[#4b5563]">
           {["Home", "About Me", "Projects", "Contact"].map((item) => (
             <li key={item}>
               <a
                 href={`#${item.replace(/\s+/g, "").toLowerCase()}`}
                 onClick={() => setNavOpen(false)}
-                className="hover:text-white transition"
+                className="hover:text-[#5b6ee1] transition"
               >
                 {item}
               </a>
