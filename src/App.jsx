@@ -10,34 +10,43 @@ import Navbar from "./components/Navbar";
 
 function App() {
   useEffect(() => {
-    const locomotiveScroll = new LocomotiveScroll();
+    const locomotiveScroll = new LocomotiveScroll({
+      smooth: true,
+    });
+
     return () => {
       locomotiveScroll.destroy();
     };
   }, []);
 
   return (
-  
-    <div className="w-full min-h-screen bg-zinc-900 text-white relative">
-      
-  <div className="absolute top-5 flex items-center justify-center">
-     <Navbar/> 
-  </div>
-      <section id="home">
-        <LandingPage />
-        <Marquee/>
-      </section>
-      <section id="aboutme">
-        <About />
-      </section>
-      <section id="projects">
-        <Projects />
-      </section>
-      <section id="contact">
-        <Footer />
-      </section>
-    </div>
+    <>
 
+      <Navbar />
+
+
+      <main
+        data-scroll-container
+        className="w-full min-h-screen bg-zinc-900 text-white"
+      >
+        <section id="home">
+          <LandingPage />
+          <Marquee />
+        </section>
+
+        <section id="aboutme">
+          <About />
+        </section>
+
+        <section id="projects">
+          <Projects />
+        </section>
+
+        <section id="contact">
+          <Footer />
+        </section>
+      </main>
+    </>
   );
 }
 
