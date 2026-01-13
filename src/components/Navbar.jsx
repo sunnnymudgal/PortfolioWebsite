@@ -31,7 +31,7 @@ export const Navbar = () => {
             text-sm lg:text-base font-semibold text-[#374151]
           "
         >
-          {["Home", "About Me", "Projects", "Contact"].map((item) => (
+          {["Home", "About", "Projects", "Contact"].map((item) => (
             <li key={item}>
               <a
                 href={`#${item.replace(/\s+/g, "").toLowerCase()}`}
