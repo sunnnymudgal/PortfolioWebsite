@@ -40,7 +40,7 @@ function App() {
 
           {/* Desktop Links */}
           <ul className="hidden md:flex items-center gap-8 text-base font-semibold text-[#374151]">
-            {["Home", "About", "Projects", "Contact"].map((item) => (
+            {["Home", "About Me", "Projects", "Contact"].map((item) => (
               <li key={item}>
                 <a
                   href={`#${item.replace(/\s+/g, "").toLowerCase()}`}
@@ -78,7 +78,7 @@ function App() {
           ${navOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"}`}
         >
           <ul className="flex flex-col items-center gap-5 py-5 text-base font-semibold text-[#374151]">
-            {["Home", "About", "Projects", "Contact"].map((item) => (
+            {["Home", "About Me", "Projects", "Contact"].map((item) => (
               <li key={item}>
                 <a
                   href={`#${item.replace(/\s+/g, "").toLowerCase()}`}
