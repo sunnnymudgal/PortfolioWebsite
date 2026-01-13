@@ -75,7 +75,7 @@ export const Navbar = () => {
         `}
       >
         <ul className="flex flex-col items-center gap-4 py-4 text-sm font-semibold text-[#374151]">
-          {["Home", "About Me", "Projects", "Contact"].map((item) => (
+          {["Home", "About", "Projects", "Contact"].map((item) => (
             <li key={item}>
               <a
                 href={`#${item.replace(/\s+/g, "").toLowerCase()}`}
