@@ -73,24 +73,7 @@ function Projects() {
                 ))}
               </div>
 
-              {/* Buttons */}
-              <div className="flex gap-4">
-                <a
-                  href="#"
-                  className="px-6 py-2 bg-[#324DAE] text-white rounded-lg hover:bg-black transition"
-                >
-                  Live Demo
-                </a>
-
-                <a
-                  href="https://github.com/sunnnymudgal"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="px-6 py-2 text-black border border-black rounded-lg hover:bg-black hover:text-white transition"
-                >
-                  GitHub
-                </a>
-              </div>
+           
             </div>
 
           </div>
