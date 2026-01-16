@@ -46,7 +46,7 @@ function Projects() {
             {/* Content */}
             <div>
               <a href="https://bluebirdproduction.up.railway.app/" target="_blank">
-              <h3 className="text-3xl font-bold text-[#324DAE] mb-4 flex items-center justify-center">
+              <h3 className="text-3xl font-bold text-[#324DAE] mb-4 flex items-center justify-center w-fit gap-4">
                <span> BlueBird E-Commerce</span> <span><FaExternalLinkAlt /></span>
               </h3>
               </a>
