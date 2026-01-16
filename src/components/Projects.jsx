@@ -1,5 +1,6 @@
 import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 function Projects() {
   return (
@@ -46,7 +47,7 @@ function Projects() {
             <div>
               <a href="https://bluebirdproduction.up.railway.app/" target="_blank">
               <h3 className="text-3xl font-bold text-[#324DAE] mb-4">
-                BlueBird E-Commerce
+                BlueBird E-Commerce <span><FaExternalLinkAlt /></span>
               </h3>
               </a>
               <p className="text-gray-600 mb-6 leading-relaxed">
