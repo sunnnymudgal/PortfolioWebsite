@@ -10,7 +10,7 @@ function LandingPage() {
     >
    
 
-      <div className="textstructure flex max-md:flex-col items-center pt-36 max-md:pt-20">
+      <div className="textstructure flex max-md:flex-col items-center pt-36 max-md:pt-24">
         <div className="masker flex flex-col items-start justify-start w-4/6">
           {["Hello", "I'm Sunny", "Mudgal"].map((item, index) => (
             <h1
