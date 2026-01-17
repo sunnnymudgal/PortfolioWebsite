@@ -22,7 +22,7 @@ function LandingPage() {
           ))}
         </div>
         <div className="md:w-2/6 w-full flex items-center justify-center md:items-end md:justify-start ">
-          { /*  <AnImage /> */}
+         <AnImage /> 
         </div>
       </div>
       <div className="border-t-[1px] border-zinc-800 mb-6 md:mb-2 flex flex-col md:flex-row items-center justify-end py-5 px-4 md:px-20">
