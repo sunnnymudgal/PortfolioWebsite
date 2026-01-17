@@ -112,12 +112,12 @@ function App() {
         className="bg-zinc-900 text-white"
       >
         <section id="home" data-scroll-section>
-           <LandingPage />
-         {/*      <Marquee />*/}
+           {/*  <LandingPage />*/}
+             <Marquee />
         </section>
 
         <section id="aboutme" data-scroll-section>
-        {/*       <About /> */}
+            <About /> 
         </section>
 
         <section id="projects" data-scroll-section>
