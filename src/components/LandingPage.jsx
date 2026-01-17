@@ -15,7 +15,7 @@ function LandingPage() {
           {["Hello", "I'm Sunny", "Mudgal"].map((item, index) => (
             <h1
               key={index}
-              className="text-5xl md:text-6xl lg:text-8xl xl:text-9xl uppercase leading-[60px] md:leading-[70px] tracking-[10px] md:tracking-[15px] px-4 md:px-20 founders font-[1000]"
+              className="text-3xl md:text-6xl lg:text-8xl xl:text-9xl uppercase leading-[60px] md:leading-[70px] tracking-[10px] md:tracking-[15px] px-4 md:px-20 founders font-[1000]"
             >
               {item}
             </h1>
@@ -26,7 +26,7 @@ function LandingPage() {
         </div>
       </div>
       <div className="border-t-[1px] border-zinc-800 mb-6 md:mb-2 flex flex-col md:flex-row items-center justify-end py-5 px-4 md:px-20">
-        
+        heyyyy
       </div>
     </div>
   );
