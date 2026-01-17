@@ -121,7 +121,7 @@ function App() {
         </section>
 
         <section id="projects" data-scroll-section>
-          <Projects />
+          {/*   <Projects /> */}
         </section>
 
         <section id="contact" data-scroll-section>
