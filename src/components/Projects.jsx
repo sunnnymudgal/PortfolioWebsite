@@ -45,11 +45,11 @@ function Projects() {
 
             {/* Content */}
             <div>
-              <a href="https://bluebirdproduction.up.railway.app/" target="_blank">
+                 {/*  <a href="https://bluebirdproduction.up.railway.app/" target="_blank"> */}
               <h3 className="text-3xl font-bold text-[#324DAE] mb-4 flex items-center justify-center w-fit gap-4">
                <span> BlueBird E-Commerce</span> <span><FaExternalLinkAlt /></span>
               </h3>
-              </a>
+              {/*     </a> */}
               <p className="text-gray-600 mb-6 leading-relaxed">
                 A full-stack fashion e-commerce platform built using Java and Spring Boot.
                 It supports product listing, wishlist, cart management, authentication,
