@@ -12,7 +12,7 @@ const Footer = () => {
         <SocialLinks />
 
         <div className="mt-4">
-          <p className="text-xs font-extralight text-[#000000a8]">© 2024 Sunny Mudgal. All rights reserved.</p>
+          <p className="text-xs font-extralight text-[#000000a8]">© 2026 Sunny Mudgal. All rights reserved.</p>
         </div>
       </div>
     </footer>
