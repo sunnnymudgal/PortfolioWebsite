@@ -79,7 +79,7 @@ function Projects() {
 
               <div className="relative group overflow-hidden rounded-xl">
                 <img
-                  src="/images/brandbird.jpg"
+                  src="/images/brandbird.png"
                   alt="The Brand Bird Website"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
