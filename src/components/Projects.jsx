@@ -86,7 +86,7 @@ function Projects() {
               </div>
 
               <div>
-               <a href="https://thebrandbird.vercel.app/"> <h3 className="text-3xl font-bold text-[black] mb-4 flex items-center gap-4">
+               <a href="https://thebrandbird.vercel.app/" target="_blank"> <h3 className="text-3xl font-bold text-[black] mb-4 flex items-center gap-4">
                   <span>The Brand Bird</span>
                   <FaExternalLinkAlt />
                 </h3>
