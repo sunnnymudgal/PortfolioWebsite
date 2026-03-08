@@ -43,7 +43,7 @@ function Projects() {
               </div>
 
               <div>
-                <h3 className="text-3xl font-bold text-[#324DAE] mb-4 flex items-center gap-4">
+                <h3 className="text-3xl font-bold text-[black] mb-4 flex items-center gap-4">
                   <span>BlueBird E-Commerce</span>
                   <FaExternalLinkAlt />
                 </h3>
@@ -86,11 +86,11 @@ function Projects() {
               </div>
 
               <div>
-                <h3 className="text-3xl font-bold text-[#16a34a] mb-4 flex items-center gap-4">
+               <a href="https://thebrandbird.vercel.app/"> <h3 className="text-3xl font-bold text-[black] mb-4 flex items-center gap-4">
                   <span>The Brand Bird</span>
                   <FaExternalLinkAlt />
                 </h3>
-
+</a>
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   A modern responsive business website built with React.js and Tailwind CSS.
                   The project features smooth animations, custom cursor effects,
