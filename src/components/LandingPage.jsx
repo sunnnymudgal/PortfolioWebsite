@@ -42,21 +42,6 @@ leading-[1.05] tracking-[6px] md:tracking-[10px]"
               using Java, Spring Boot, React and Cloud technologies.
             </motion.p>
 
-            {/* CTA BUTTONS */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8 }}
-              className="flex flex-wrap gap-5 mt-10"
-            >
-              <button className="px-8 py-3 bg-white text-black rounded-full font-semibold hover:scale-105 transition">
-                View Projects
-              </button>
-
-              <button className="px-8 py-3 border border-zinc-600 rounded-full hover:bg-zinc-800 transition">
-                Contact Me
-              </button>
-            </motion.div>
           </div>
 
           {/* RIGHT IMAGE */}
