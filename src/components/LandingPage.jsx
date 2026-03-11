@@ -24,8 +24,8 @@ function LandingPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2 }}
                 className="uppercase font-[majormono] 
-                text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[9rem]
-                leading-tight tracking-[8px] md:tracking-[14px]"
+text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
+leading-tight tracking-[4px] md:tracking-[8px]"
               >
                 {item}
               </motion.h1>
